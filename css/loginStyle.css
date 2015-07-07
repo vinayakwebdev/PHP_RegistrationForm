@@ -1,0 +1,124 @@
+body{
+	padding: 5px;
+	background: #645aa3 url("../images/default_skin_purple_community.jpg") no-repeat scroll 50% 0 !important;
+	font-family: Arial,Helvetica,sans-serif;
+}
+form{
+	padding: 10px;
+}
+table{
+	border:1px solid black;
+	border-collapse: separate;
+	
+}
+#cenImg{
+	float:left;
+	margin-left:10%;
+	margin-top:4%;
+}
+#cenImg img{
+	width:145%;
+}
+#sideDiv{
+	 padding-top:3%;
+}
+#existingUser{
+	margin-left: 60%;
+	margin-right: 10%;
+	background: #645aa3;
+	font-weight: bold;
+    padding: 5px 0px 0px 10px;
+    position: relative;
+    border-radius: 5px;
+    color : #fff;
+}
+#existingUser table{
+	border:none;
+	width:100%;
+}
+#existingUser input{
+	padding:5px;
+	border-radius: 3px;
+	border-style:none;
+}
+#keepLogIn{
+	padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: 0px;
+    *overflow: hidden;
+}
+#extU_Button{
+	background: #493F7C;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+}
+#newUserTable{
+	border-spacing: 0.5em;
+}
+#topNav{
+	margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    text-align: left;
+    background-color: black;
+}
+#topNav a{
+    background-image: url("../images/vglogo.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 222px auto;
+    display: block;
+    float: left;
+    height: 50px;
+    text-indent: -9999em;
+    width: 232px;
+    background-color: black;
+    margin-left: 5%;
+}
+#signUpBtn{
+	background: #FFC617;
+    font-weight: bold;
+    cursor: pointer;
+}
+#font11px{
+	font-size: 11px;
+}
+.fltRight{
+	float:right;
+}
+.pdRp5{
+	padding-right: 5%;	
+}
+.pdRpx10{
+	padding-right: 10px;
+}
+.widthp100{
+	width:100%;
+}
+.widthp25{
+	width:20%;
+}
+.textClrViolet{
+	color:#8D85D2;
+}
+footer{
+	clear: both;
+    background: #473c81 none repeat scroll 0 0;
+	position:fixed;
+	bottom: 0px;
+	width: 98%;
+	text-align: center; 
+}
+footer a{
+	color:#8D85D2;
+	text-decoration: none;
+}
+footer p {
+	float:left;
+	margin-left:5%;
+}
+
