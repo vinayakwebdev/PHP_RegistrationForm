@@ -20,7 +20,7 @@ table{
 	width:145%;
 }
 #sideDiv{
-	 padding-top:3%;
+	<!-- padding-top:3%; -->
 }
 #existingUser{
 	margin-left: 60%;
@@ -111,14 +111,19 @@ footer{
 	position:fixed;
 	bottom: 0px;
 	width: 98%;
-	text-align: center; 
+	text-align: center;
+	 
 }
 footer a{
 	color:#8D85D2;
 	text-decoration: none;
+	text-align: right;
 }
 footer p {
 	float:left;
 	margin-left:5%;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	
 }
 

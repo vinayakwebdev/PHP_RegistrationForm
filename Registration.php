@@ -14,10 +14,9 @@ if (mysqli_connect_errno($con)) {
 	 echo 'Successfully connected to your database…'; 
 }
 */
-
 function NewUser() {
 	 $email = $_POST['email'];
-	 $password = $_POST['pass'];	
+	 $password = $_POST['password'];	
 	 $firstname = $_POST['fname'];
 	 $middlename = $_POST['mname'];
 	 $lastname = $_POST['lname']; 
@@ -28,23 +27,32 @@ function NewUser() {
 	 $postCode = $_POST['postcode'];
 	 $province = $_POST['province'];
 	 $telephone = $_POST['telephone']; 
-	  
-	 $query = "INSERT INTO websiteusers ('email',`Password`,`First Name`, `Middle Name`, `Last Name`, `Age`, `sex`, `Street Name`, `City`, `Postal Code`, `Province`, `Telephone`, `Email`, `userID`)
-	  VALUES ('$email','$password','$firstname','$middlename','$lastname','$age','$gender','$street','$city','$postCode','$province','$telephone',NULL)"; 
+	 
+	 $query = "INSERT INTO websiteusers (`email`,`Password`,`First Name`, `Middle Name`, `Last Name`, `Age`, `Gender`, `Street Name`, `City`, `Postal Code`, `Province`, `Telephone`)
+	  VALUES ('$email','$password','$firstname','$middlename','$lastname','$age','$gender','$street','$city','$postCode','$province','$telephone')"; 
 	 $data = mysql_query ($query)or die(mysql_error()); 
 	 if($data) {
-	 	 echo "Thank you for your time and efforts to Register \n YOUR REGISTRATION IS COMPLETED...!"; 
+	 	 echo "Thank you <b> $firstname $lastname </b> for your time and efforts to Register <br/>";
+	 	 echo "YOUR REGISTRATION IS COMPLETED...!"; 
+	 }else{
+	 	echo "Sorry can't Register some problem";
 	 } 
 } 
 
 function SignUp() {
-	 if(!empty($_POST['user'])) //checking the 'user' name which is from Sign-Up.html, is it empty or have some text 
-	 { $query = mysql_query("SELECT * FROM websiteusers WHERE userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error()); 
-	 if(!$row = mysql_fetch_array($query) or die(mysql_error())) {
-	 	 newuser(); 
-	 } else {
-	 	 echo "SORRY...YOU ARE ALREADY REGISTERED USER..."; } 
-	 } 
+	if(!empty($_POST['email'])){
+	 	$query = mysql_query("SELECT `Email` FROM websiteusers WHERE email = '$_POST[email]'") or die(mysql_error());
+		$count=mysql_num_rows($query);
+		if($count != 1) {	
+			newuser();
+		} else {
+			$firstname = $_POST['fname'];
+			$lastname = $_POST['lname']; 
+			$email = $_POST['email'];
+			echo "SORRY... <i> $firstname $lastname </i> YOU ARE ALREADY REGISTERED USER as your Email : <b> $email </b> is already registred...! <br/>";
+			echo "Dont Try to Trick us buddy.. hehehe ;)"; 
+		}
+	}
 } 
 if(isset($_POST['submit'])) {
 	 SignUp(); 
