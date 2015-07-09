@@ -57,5 +57,5 @@ function SignUp() {
 if(isset($_POST['submit'])) {
 	 SignUp(); 
 } 
-
+/* Rafael testing*/
 ?>
